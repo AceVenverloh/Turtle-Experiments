@@ -1,0 +1,33 @@
+public class Main {
+  public static void main(String[] args) {  
+    World nyc = new World(400,400);
+    Turtle harry = new Turtle(69, 50, nyc);
+    Turtle gary = new Turtle(100,100, nyc);
+    Turtle larry = new Turtle(nyc);
+    
+    larry.forward();
+    gary.forward(50);
+    harry.moveTo(200,200);
+    harry.turn(60.0);
+    gary.turnLeft();
+    
+    larry.setPenDown(true);
+    larry.setHeading(120.0);
+    gary.setWidth(30);
+    gary.setHeight(30);
+    gary.setName("Gary");
+    larry.setName("Larry");
+    harry.setName("Harry");
+    harry.setColor(new Color (100, 200, 50));
+    larry.setShellColor(new Color (200, 50, 50));
+    
+    gary.getName();
+    larry.getWidth();
+    harry.toString();
+    
+    System.out.println("the distance between gary and larry is " 
+    + gary.getDistance(larry.getXPos(), larry.getYPos()));
+    
+    nyc.setVisible(true);
+  }
+}
